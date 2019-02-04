@@ -8,8 +8,8 @@ import time
 
 class DelegateThatReceives(object):
 
-    def say_it(self, message):
-        print("Message received!", message)
+    def say_it(self, method, left, right):
+        print("Message received!", method, left, right)
 
 
 def main():

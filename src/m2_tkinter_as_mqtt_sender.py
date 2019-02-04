@@ -50,37 +50,37 @@ def main():
 
     forward_button = ttk.Button(main_frame, text="Forward")
     forward_button.grid(row=2, column=1)
-    forward_button['command'] = lambda: mqtt_client.send_message("say_it", ["forward", left_speed_entry.get(), right_speed_entry.get])
+    forward_button['command'] = lambda: mqtt_client.send_message("say_it", ["forward", left_speed_entry.get(), right_speed_entry.get()])
     root.bind('<Up>', lambda event: print("Forward key"))
 
     left_button = ttk.Button(main_frame, text="Left")
     left_button.grid(row=3, column=0)
-    left_button['command'] = lambda: mqtt_client.send_message("say_it", ["left", left_speed_entry.get(), right_speed_entry.get])
+    left_button['command'] = lambda: mqtt_client.send_message("say_it", ["left", left_speed_entry.get(), right_speed_entry.get()])
     root.bind('<Left>', lambda event: print("Left key"))
 
     stop_button = ttk.Button(main_frame, text="Stop")
     stop_button.grid(row=3, column=1)
-    stop_button['command'] = lambda: mqtt_client.send_message("say_it", ["stop", left_speed_entry.get(), right_speed_entry.get])
+    stop_button['command'] = lambda: mqtt_client.send_message("say_it", ["stop", left_speed_entry.get(), right_speed_entry.get()])
     root.bind('<space>', lambda event: print("Stop key"))
 
     right_button = ttk.Button(main_frame, text="Right")
     right_button.grid(row=3, column=2)
-    right_button['command'] = lambda: mqtt_client.send_message("say_it", ["right", left_speed_entry.get(), right_speed_entry.get])
+    right_button['command'] = lambda: mqtt_client.send_message("say_it", ["right", left_speed_entry.get(), right_speed_entry.get()])
     root.bind('<Right>', lambda event: print("Right key"))
 
     back_button = ttk.Button(main_frame, text="Back")
     back_button.grid(row=4, column=1)
-    back_button['command'] = lambda: mqtt_client.send_message("say_it", ["back", left_speed_entry.get(), right_speed_entry.get])
+    back_button['command'] = lambda: mqtt_client.send_message("say_it", ["back", left_speed_entry.get(), right_speed_entry.get()])
     root.bind('<Down>', lambda event: print("Back key"))
 
     up_button = ttk.Button(main_frame, text="Up")
     up_button.grid(row=5, column=0)
-    up_button['command'] = lambda: mqtt_client.send_message("say_it", ["up", left_speed_entry.get(), right_speed_entry.get])
+    up_button['command'] = lambda: mqtt_client.send_message("say_it", ["up", left_speed_entry.get(), right_speed_entry.get()])
     root.bind('<u>', lambda event: print("Up key"))
 
     down_button = ttk.Button(main_frame, text="Down")
     down_button.grid(row=6, column=0)
-    down_button['command'] = lambda: mqtt_client.send_message("say_it", ["down", left_speed_entry.get(), right_speed_entry.get])
+    down_button['command'] = lambda: mqtt_client.send_message("say_it", ["down", left_speed_entry.get(), right_speed_entry.get()])
     root.bind('<j>', lambda event: print("Down key"))
 
     # Buttons for quit and exit
