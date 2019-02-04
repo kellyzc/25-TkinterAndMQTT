@@ -14,8 +14,10 @@ def main():
     print()
 
     while True:
-        s = input("Enter a message: ")
-        mqtt_client.send_message("say_it", [s])
+        string = input("Enter a string: ")
+        num = input("Enter a number: ")
+        name = input("Enter your name: ")
+        mqtt_client.send_message("say_it", [string, num, name])
 
 
 main()
